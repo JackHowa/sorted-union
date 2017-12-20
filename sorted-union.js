@@ -4,9 +4,6 @@ function uniteUnique(arr) {
 
     // set inside of spread operator doesn't allows duplicates
     // the Set object lets you store unique values of any type, whether primitive values or object references.
-    const dedupedArray = [...new Set(flatArray)];
-
-    // sort causes numerical order
-    return dedupedArray.sort();
+    return [...new Set(flatArray)];
 }
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
